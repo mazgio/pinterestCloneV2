@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Icon } from 'react-icons-kit';
 import { eyeDisabled } from 'react-icons-kit/ionicons/eyeDisabled';
 import { eye } from 'react-icons-kit/ionicons/eye';
@@ -119,15 +119,15 @@ const Signup = (props) => {
         return errors;
     };
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <div className="signup-container">
-            {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
+            {Object.keys(formErrors).length === 0 && isSubmit ? (
                 navigate("/signin")
             ) : (
                 <></>
-            )} */}
+            )}
             <form onSubmit={handleSubmit}>
                 <h1>Sign Up</h1>
                 <hr />
