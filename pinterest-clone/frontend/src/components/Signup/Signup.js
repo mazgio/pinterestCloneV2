@@ -4,7 +4,7 @@ import { Icon } from 'react-icons-kit';
 import { eyeDisabled } from 'react-icons-kit/ionicons/eyeDisabled';
 import { eye } from 'react-icons-kit/ionicons/eye';
 import "./Signup.css";
-import { use } from "bcrypt/promises";
+// import { use } from "bcrypt/promises";
 
 const Signup = (props) => {
     const initialValues = {
@@ -31,13 +31,13 @@ const Signup = (props) => {
     /* End Password visibility */
 
     const [formValues, setFormValues] = useState(initialValues);
-    const [formErrors, setFormErrors] = useState({});
+    // const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
 
-    useEffect(() => {
-        if (Object.keys(formErrors).length === 0 && isSubmit) {
-        }
-    }, [formErrors, isSubmit]);
+    // useEffect(() => {
+    //     if (Object.keys(formErrors).length === 0 && isSubmit) {
+    //     }
+    // }, [formErrors, isSubmit]);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -46,7 +46,7 @@ const Signup = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setFormErrors(validate(formValues));
+        // setFormErrors(validate(formValues));
         setIsSubmit(true);
         // create a new user
         const newUser = {
@@ -70,7 +70,6 @@ const Signup = (props) => {
         const response = await fetch(
             process.env.REACT_APP_SERVER_URL + "/signup",
             settings,
-            // console.log(process.env.REACT_APP_SERVER_URL)
 
         );
         // console.log("response", response);
@@ -78,9 +77,10 @@ const Signup = (props) => {
         const parsedRes = await response.json();
         try {
             if (response.ok) {
-                //props.setCurrentUserId(parsedRes.id);
-                setFormErrors(validate(formValues));
+                // props.setCurrentUserId(parsedRes.id);
+                // setFormErrors(validate(formValues));
                 setIsSubmit(true);
+                console.log("hello world")
             } else {
                 throw new Error(parsedRes.message);
             }
@@ -91,43 +91,45 @@ const Signup = (props) => {
 
 
 
-    const validate = (values) => {
-        const errors = {};
-        // const regex =
-        //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    // const validate = (values) => {
+    //     const errors = {};
+    //     // const regex =
+    //     //   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        if (!values.firstname) {
-            errors.firstname = "First name is required";
-        }
+    //     if (!values.firstname) {
+    //         errors.firstname = "First name is required";
+    //     }
 
-        if (!values.lastname) {
-            errors.lastname = "Last name is required";
-        }
+    //     if (!values.lastname) {
+    //         errors.lastname = "Last name is required";
+    //     }
 
-        if (!values.username) {
-            errors.username = "Username is required";
-        }
+    //     if (!values.username) {
+    //         errors.username = "Username is required";
+    //     }
 
-        if (!values.emailAddress) {
-            errors.emailAddress = "Email is required";
-        }
+    //     if (!values.emailAddress) {
+    //         errors.emailAddress = "Email is required";
+    //     }
 
-        if (!values.password) {
-            errors.password = "Password is required";
-        }
+    //     if (!values.password) {
+    //         errors.password = "Password is required";
+    //     }
 
-        return errors;
-    };
+    //     return errors;
+    // };
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
         <div className="signup-container">
-            {Object.keys(formErrors).length === 0 && isSubmit ? (
+            {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
                 navigate("/signin")
             ) : (
-                <></>
-            )}
+                <>
+
+                </>
+            )} */}
             <form onSubmit={handleSubmit}>
                 <h1>Sign Up</h1>
                 <hr />
@@ -142,7 +144,7 @@ const Signup = (props) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <p className="err">{formErrors.firstname}</p>
+                    <p className="err"></p>
                     <div className="field">
                         <label>Last Name</label>
                         <input
@@ -153,7 +155,7 @@ const Signup = (props) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <p className="err">{formErrors.lastname}</p>
+                    <p className="err"></p>
                     <div className="field">
                         <label>Username</label>
                         <input
@@ -164,7 +166,7 @@ const Signup = (props) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <p className="err">{formErrors.username}</p>
+                    <p className="err"></p>
                     <div className="field">
                         <label>Email</label>
                         <input
@@ -175,7 +177,7 @@ const Signup = (props) => {
                             onChange={handleChange}
                         />
                     </div>
-                    <p className="err">{formErrors.emailAddress}</p>
+                    <p className="err"></p>
                     <div className="field">
                         <label>Password</label>
                         <div className="pass-eye">
@@ -189,7 +191,7 @@ const Signup = (props) => {
                             <span onClick={handleToggle} className="eye"><Icon icon={icon} /></span>
                         </div>
                     </div>
-                    <p className="err">{formErrors.password}</p>
+                    <p className="err"></p>
                     <button>Sign Up</button>
                 </div>
             </form>
@@ -198,3 +200,10 @@ const Signup = (props) => {
 };
 
 export default Signup;
+
+
+// firstname: Mirali
+// lastname:Mirhashimli
+// username:MiraliM
+// email: alimidshimli@gmail.com
+// password: sdfdsfdsA1!

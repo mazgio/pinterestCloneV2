@@ -25,7 +25,7 @@ mongoose.connection.on("open", () =>
 mongoose.connection.on("error", () => console.error);
 
 // allow cors requests
-app.use(cors());
+app.use(cors({ origin: "*", credentials: true }));
 
 // parse JSON data received
 app.use(express.json());
@@ -45,6 +45,6 @@ app.use("/signup", registerUserRouter);
 
 app.use(globalErrorHandler);
 
-app.listen(8000, () => {
-    console.log(`Server has started on port  8000!`);
+app.listen(3000 || process.env.PORT, () => {
+    console.log(`Server has started on port  3000!`);
 });
