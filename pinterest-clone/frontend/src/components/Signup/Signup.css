@@ -1,0 +1,237 @@
+.main-signup{
+    width:400px;
+    border: 1px solid #31525b;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fae6b1;
+}
+
+.main-signup h2{
+    color: #31525b;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-signup .sign-box{
+    min-height: 8rem;
+    margin-bottom: 1rem;
+    background-color: #ffa2017a;
+    color: #31525b;
+    border-radius: 4px;
+    border: 2px solid #31525b;
+    position: relative;
+    z-index:1;
+}
+
+.main-signup .sign-box a{
+    padding: 1rem;
+    display: block;
+}
+/*Customer*/
+.signup-container{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #white;
+    flex: 1;
+    width: 100%;
+}
+
+.signup-container form{
+    border: 1px solid #31525b;
+    padding: 20px;
+    border-radius: 5px;
+    background: #f0e9e984;;
+    margin: 100px 0;
+}
+
+.signup-container form .err{
+    color: red;
+    font-weight: 500;
+}
+
+.signup-container > form h1{
+    margin-bottom: 20px;
+    justify-content: center ;
+    text-align: center;
+    color:#f53614;
+}
+
+.signup-container form hr{
+    margin-bottom: 20px;
+}
+
+.signup-container form .form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-container form .form .field{
+    margin-top: 20px;
+}
+
+.signup-container form .form .field label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signup-container form .form .field input{
+    width: 100%;
+    background-color: white;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.signup-container > form .form button{
+    height: 30px;
+    background: #e94131;
+    color: #f6f7e7;
+    font-size: 15px;
+    border: 0px;
+    font-weight: 500;
+    padding: 0px 10px;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+/*Business*/
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.address-input{
+    width: 45%;
+    margin-top: 1rem;
+}
+
+/*Start Responsive*/
+@media screen and (max-width: 1810px){
+    .main-signup{
+        width: 30%;
+        margin: 2rem 0;
+        margin-top: 6rem;
+    }
+    
+        .signup-container form{
+            width: 40%;
+            margin: 2rem 0;
+            padding: 2rem;
+            margin-top: 6rem;
+
+        }
+    
+}
+@media screen and (max-width: 800px){
+    .main-signup{
+        width: 50%;
+        margin: 2rem 0;
+        margin-top: 6rem;
+    
+    }
+    .signup-container form{
+        width: 50%;
+        margin: 2rem 0;
+        padding: 2rem;
+        margin-top: 6rem;
+
+    }
+}
+@media screen and (max-width: 600px){
+    .main-signup{
+        width: 70%;
+        margin: 2rem 0;
+        margin-top: 6rem;
+
+    }
+    .signup-container form{
+        width: 70%;
+        margin: 2rem 0;
+        padding: 2rem;
+        margin-top: 6rem;
+
+    }
+}
+
+@media screen and (max-width: 820px){
+    .signup-container form{
+        width: 80%;
+        margin: 10% auto;
+    }
+    .signup-container form{
+        width: 90%;
+        margin: 2rem 0;
+        padding: 2rem;
+        margin-top: 6rem;
+
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main-signup{
+        width: 90%;
+        margin: 2rem 0;
+        margin-top: 6rem;
+
+    }
+    .signup-container form{
+        width: 100%;
+        margin: 2rem 0;
+        padding: 2rem;
+        margin-top: 6rem;
+
+    }
+
+
+    .main-signup h2{
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+
+    .main-signup .sign-box a h3{
+        font-size: 1rem;
+    }
+
+    .main-signup .sign-box a p{
+        font-size: 12px;
+    }
+
+
+    .signup-container form{
+        width: 80%;
+        margin: 10% auto;
+        margin-top: 6rem;
+    }
+
+    .signup-container form h1{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .signup-container form hr{
+        margin: 5px auto;
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    .signup-container form .form .field{
+        margin-top: 5px;
+    }
+    .form{
+        font-size: 12px;
+    }
+    .signup-container form .form .field input{
+        font-size: 10px;
+        height: 30px;
+    }
+    .signup-container form .form .field{
+        margin-top: 5px;
+    }
+}
+/*End Responsive*/

@@ -1,0 +1,135 @@
+.signin-container{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #white;
+    flex: 1;
+    width: 100%;
+} 
+
+.signin-container form{
+    width:400px;
+    border: 1px solid #31525b;
+    padding: 20px;
+    border-radius: 5px;
+    background:#f0e9e984;
+}
+
+.signin-container form .err{
+    color: red;
+    font-weight: 500;
+}
+
+.signin-container > form h1{
+    margin-bottom: 20px;
+    justify-content: center ;
+    text-align: center;
+    color:  #f53614;
+}
+
+.signin-container > form hr{
+    margin-bottom: 20px;
+}
+
+.signin-container > form .form{
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-container > form .form .field{
+    margin-top: 20px;
+}
+
+.signin-container > form .form .field label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signin-container > form .form .field input{
+    width: 100%;
+    background-color: white;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 15px;
+    height: 40px;
+}
+
+.signin-container > form .form button{
+    height: 30px;
+    background: #e94131;
+    color: #f6f7e7;
+    font-size: 15px;
+    border: 0px;
+    font-weight: 500;
+    padding: 0px 10px;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+.pass-eye{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.eye{
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.sign-button{
+    color: #130908;
+    font-weight: bold;
+}
+
+/*Start Responsive*/
+
+@media screen and (max-width: 1800px){
+    .signin-container form{
+        width: 35%;
+padding:3rem;
+        margin-top: 6rem;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .signin-container form{
+        width: 80%;
+padding:3rem;
+        margin-top: 6rem;
+    }
+
+}
+@media screen and (max-width: 400px){
+    .signin-container form{
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .signin-container form h1{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .signin-container form hr{
+        margin: 5px auto;
+        width: 90%;
+        margin-bottom: 5px;
+    }
+    .signin-container form .form .field{
+        margin-top: 5px;
+    }
+    .form{
+        font-size: 12px;
+    }
+    .signin-container form .form .field input{
+        font-size: 10px;
+        height: 30px;
+    }
+}
+/*End Responsive*/
