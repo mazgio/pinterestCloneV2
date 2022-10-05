@@ -30,7 +30,7 @@ background-color: white;
 display: flex;
 width: 100%;
 height: 100%;
-margin-top: 15px;
+margin-top: 5rem;
 justify-content: center;
 `;
 

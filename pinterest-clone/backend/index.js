@@ -45,6 +45,9 @@ app.use("/signup", registerUserRouter);
 
 app.use(globalErrorHandler);
 
+
 app.listen(3000 || process.env.PORT, () => {
     console.log(`Server has started on port  3000!`);
+
+   
 });
