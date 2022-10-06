@@ -31,13 +31,13 @@ const Signup = (props) => {
     /* End Password visibility */
 
     const [formValues, setFormValues] = useState(initialValues);
-    // const [formErrors, setFormErrors] = useState({});
+    const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
 
-    // useEffect(() => {
-    //     if (Object.keys(formErrors).length === 0 && isSubmit) {
-    //     }
-    // }, [formErrors, isSubmit]);
+    useEffect(() => {
+        if (Object.keys(formErrors).length === 0 && isSubmit) {
+        }
+    }, [formErrors, isSubmit]);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -80,7 +80,7 @@ const Signup = (props) => {
                 // props.setCurrentUserId(parsedRes.id);
                 // setFormErrors(validate(formValues));
                 setIsSubmit(true);
-                console.log("hello world")
+                console.log("parsed", parsedRes);
             } else {
                 throw new Error(parsedRes.message);
             }
