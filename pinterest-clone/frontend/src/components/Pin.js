@@ -10,13 +10,12 @@ function Pin({ urls }) {
 
                 <img src={urls?.regular} alt="pin" />
 
+                <Content>
+                    <Title>
+                        <a style={{ color: "red" }} href="/">Sample Name</a>
+                    </Title>
+                </Content>
             </Container>
-            <Content>
-                <Title>
-                    <a style={{ color: "red" }} href="/">Sample Name</a>
-                </Title>
-
-            </Content>
         </Wrapper>
     );
 }
@@ -34,12 +33,9 @@ const Content = styled.div`
     padding: 6px 66px;
     overflow: hidden;
 `;
-
-
 const Wrapper = styled.div`
 display: inline-flex;
 padding: 8px;
-
 
 &:hover ${Content} {
     display:  flex;
@@ -47,8 +43,7 @@ padding: 8px;
     align-items:center;
     transition: 1s;
 }
-`
-    ;
+`;
 const Container = styled.div`
     display: flex;
     align-items: center;
@@ -66,10 +61,8 @@ const Container = styled.div`
     }
 `;
 const Title = styled.h4`
-
     a {
             text-decoration:none;
-
     }
 
 `;
