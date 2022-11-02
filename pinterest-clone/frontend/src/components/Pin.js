@@ -26,7 +26,7 @@ export default Pin;
 const Content = styled.div`
     width: 236px;
     height:50px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.3);
     position: absolute;
     bottom: 0;
     display:none;
